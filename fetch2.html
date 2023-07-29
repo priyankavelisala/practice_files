@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+     }
+     #container div{
+        height:400px;
+        width:300px;
+        border: 1px solid black;
+     }
+    </style>
+</head>
+<body>
+    <h1>user information</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel distinctio a vitae voluptate 
+        culpa mollitia deleniti iste modi, sddfghjn fghhgfr autem odit rerum doloremque incidunt, 
+        ullam aliquam adipisci ksjuybewkdyf, csjabvnerugu,bvoiuyehjdf beatae sunt quo facilis
+         dolorem aliquid repellat excepturi? Nobis vitae dolor molestiae velit quam.</p>
+         <button onclick="fn()">  get data</button>
+
+         <div id="container"></div>
+</body>
+</html>
+<script>
+
+    function fn(){
+        fetch("https://randomuser.me/api/?results=100").then(function(res){
+            return res.json()
+        }).then(function(actual_data){
+           // console.log(actual_data)
+           var data=actual_data.results
+         // console.log(data)
+              display(data)
+        })
+    }
+
+
+    function display(data){
+        document.querySelector("#container").innerHTML=""
+       data.forEach(function(el){
+
+            let div=document.createElement("div")
+
+            let img=document.createElement("img")
+            img.setAttribute("src",el.picture.medium)
+            img.style.height="250px"
+            img.style.width="100%"
+
+             let name=document.createElement("h1")
+             name.innerText=el.name.first+ el.name.last;
+
+             let gender=document.createElement("h3")
+             gender.innerText=el.gender;
+
+             let phone=document.createElement("h2")
+             phone.innerText=el.phone;
+
+
+          
+
+             div.append(img,name,gender,phone)
+        document.querySelector("#container").append(div)
+            
+
+        })
+      
+
+      
+        
+    }
+
+</script>
