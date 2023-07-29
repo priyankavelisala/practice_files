@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+        <style type="text/css">
+            .container {
+                display:flex;
+            justify-content: center;
+            gap:10px;
+            }
+            #one div{
+                border:1px solid black;
+                height:40px;
+                 width:40px;
+              margin-top:10px;
+             
+            }
+            #two{
+                margin-top: 42px;
+            }
+            #two div{
+                border:1px solid black;
+                height:40px; 
+                width:40px;
+                margin-top:12px;
+                background-color: rgb(230, 50, 80);
+            }
+            #too{
+                margin-top: 262px;
+            }
+            #too div{
+                border:5px solid black;
+                height:30px;
+                 width:35px;
+                 margin-top:12px;
+                 background-color: antiquewhite;
+            }
+            #three{
+                display:flex;
+                margin-top: 159px;
+                gap:10px;
+                
+            }
+            #three div div{
+                border:1px solid black;
+                height:40px;
+                 width:40px;
+                 margin-top:10px;
+                 background-color: blue;
+            }
+            #four {
+                display:flex;
+                margin-top: 54px;
+                gap:10px;
+            }
+            #four div div{
+                border:1px solid black;
+                height:40px; 
+                width:40px;
+                margin-top:10px
+            }
+            #five div{
+                border:1px solid black;
+                height:40px;
+                 width:40px;
+                 margin-top:10px
+            }
+            h1{
+                font-size: 25px;
+                text-align: center;
+            
+            }
+            #one1{
+                background-color: maroon;
+            }
+            #one1 h1{
+                text-align:center;
+                font-size: 18px;
+              color:white
+            }
+            #one :nth-child(2){
+                background-color:  rgb(49, 117, 49);
+            }
+            #one :nth-child(3){
+                background-color: rgb(49, 117, 49);
+            }
+            #one :nth-child(4){
+                background-color:  rgb(49, 117, 49);
+            }
+            #one :nth-child(5){
+                background-color:  rgb(49, 117, 49);
+            }
+            #one :nth-child(6){
+                background-color:  rgb(49, 117, 49);
+            }
+            #one :nth-child(7){
+                background-color:  rgb(49, 117, 49);
+            }
+            #two div h1{
+                text-align:center;
+                font-size: 18px;
+              color:black;
+              
+            }
+            #four div:nth-child(1) div:nth-child(1){
+                background-color: purple;
+            }
+            #four div:nth-child(1) div:nth-child(2){
+                background-color: orangered;
+            }
+            #four div:nth-child(1) div:nth-child(3){
+                background-color:orangered;
+            }
+            #four div:nth-child(1) div:nth-child(4){
+                background-color: orangered;
+            }
+            #four div:nth-child(1) div:nth-child(5){
+                background-color: orangered;
+            }
+            #four div:nth-child(1) div:nth-child(6){
+                background-color: grey;
+            }
+            #four div:nth-child(2) div:nth-child(1){
+                background-color: green;
+            }
+            #four div:nth-child(2) div:nth-child(2){
+                background-color: purple;
+            } 
+            #four div:nth-child(2) div:nth-child(3){
+                background-color: purple;
+            }
+            #four div:nth-child(2) div:nth-child(4){
+                background-color: orangered;
+            }
+            #four div:nth-child(2) div:nth-child(5){
+                background-color: orangered;
+            }
+            #four div:nth-child(2) div:nth-child(6){
+                background-color: grey;
+            }
+            #four div:nth-child(3) div:nth-child(1){
+                background-color: green;
+            }
+            #four div:nth-child(3) div:nth-child(2){
+                background-color: green;
+            }
+            #four div:nth-child(3) div:nth-child(3){
+                background-color: purple;
+            }
+            #four div:nth-child(3) div:nth-child(4){
+                background-color: purple;
+            }
+            #four div:nth-child(3) div:nth-child(5){
+                background-color: orangered;
+            }
+            #four div:nth-child(3) div:nth-child(6){
+                background-color: grey;
+            }
+            #four div:nth-child(4) div:nth-child(1){
+                background-color: green;
+            }
+            #four div:nth-child(4) div:nth-child(2){
+                background-color: green;
+            }
+            #four div:nth-child(4) div:nth-child(3){
+                background-color: green;
+            }
+            #four div:nth-child(4) div:nth-child(4){
+                background-color: purple;
+            }
+            #four div:nth-child(4) div:nth-child(5){
+                background-color: purple;
+            }
+            #four div:nth-child(4) div:nth-child(6){
+                background-color: grey;
+            }
+            #four div:nth-child(5) div:nth-child(1){
+                background-color: rgb(248, 52, 85);
+            }
+            #four div:nth-child(5) div:nth-child(2){
+                background-color: rgb(248, 52, 85);
+            }
+            #four div:nth-child(5) div:nth-child(3){
+                background-color: rgb(248, 52, 85);
+            }
+            #four div:nth-child(5) div:nth-child(4){
+                background-color: rgb(248, 52, 85);
+            }
+            #four div:nth-child(5) div:nth-child(5){
+                background-color: rgb(248, 52, 85);
+            }
+            #four div:nth-child(5) div:nth-child(6){
+                background-color: grey;
+            }
+            #five div:nth-child(1){
+                background-color: yellow;
+            }
+            #five div:nth-child(2){
+                background-color: yellow;
+            }
+            #five div:nth-child(3){
+                background-color: yellow;
+            }
+            #five div:nth-child(4){
+                background-color: yellow;
+            }
+            #five div:nth-child(5){
+                background-color: yellow;
+            }
+            #five div:nth-child(6){
+                background-color: yellow;
+            }
+            #five div:nth-child(7){
+                background-color: grey;
+            }
+            #line1{
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+            }
+           #line1 div{
+             border: 1px solid grey;
+             height:30px;
+             width:30px;
+             background-color: rgb(53, 88, 53);
+             text-align: center;
+           }
+           #line2{
+                display: flex;
+                justify-content: center;
+                
+            }
+           #line2 div{
+             border: 1px solid grey;
+             height:30px;
+             width:30px;
+             background-color: rgb(95, 160, 95);
+             text-align: center;
+           }
+           #si{
+            border:2px solid black;
+            height:110px;
+            width:100px;
+            margin-top: 60px;
+           margin-left: 360px;
+           margin-bottom: -140px;
+           background-color: rgb(110, 172, 110);
+           }
+           #si p:nth-child(1){
+            margin-left: 80px;
+           
+           }
+           #si h1:nth-child(2){
+            font-size: 50px;
+            margin-top: -15px;
+            margin-right: 50px;
+           }
+           #si p:nth-child(3){
+            margin-top: -40px;
+            margin-left: 5px;
+           }
+        </style>
+    
+</head>
+<body>
+    <h1>  ELEMENTS OF PERIODIC TABLE </h1>
+    <div id="si">
+<p>14</p>
+<h1>Si</h1>
+<p>Silicon</p>
+    </div>
+    <div class="container">
+    <div id="one">
+        <div id="one1"><h1>H</h1></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="two">
+        <div><h1>4</h1></div>
+        <div><h1>12</h1></div>
+        <div><h1>20</h1></div>
+        <div><h1>38</h1></div>
+        <div><h1>56</h1></div>
+        <div><h1>88</h1></div>
+    </div>
+    <div id="too">
+        <div></div>
+        <div></div>
+    </div>
+    <div id="three">
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
+        <div id="four">
+            <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div id="five">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    </div>
+<div class="below">
+    <div id="line1">
+        <div>La</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="line2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>Am</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>No</div>
+    </div>
+</div>
+</body>
+</html>
