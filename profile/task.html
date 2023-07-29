@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+   <div style="text-align: center; margin-top: 100px; "> 
+    <div >
+        <select name="size" id="size" onchange="changesize()">
+            <option >Select size</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="40">40</option>
+        </select>
+        <select name="color" id="color" onchange="changecolor()">
+            <option > Select color</option>
+            <option value="green">green</option>
+            <option value="red">red</option>
+            <option value="orange">orange</option>
+            <option value="violet">violet</option>
+        </select>
+           </div> 
+           <h1 id="text">
+             Hello, Javascript. Your Awesome
+           </h1>
+     </div>
+  </body>
+</html>
+<script>
+
+function changesize(){
+    let size=document.getElementById("size")
+      let text=document.getElementById("text")
+     switch(size.value){
+        case "10":
+            text.style.fontSize="10px"
+            break;
+            case "20":
+            text.style.fontSize="20px"
+            break;
+            case "30":
+            text.style.fontSize="30px"
+            break;
+            case "40":
+            text.style.fontSize="40px"
+            
+     }
+    
+ }
+ function changecolor(){
+      let color= document.getElementById("color")
+      let text=document.getElementById("text")
+       switch(color.value){
+        case "green":
+            text.style.color="green"
+            break;
+            case "red":
+            text.style.color="red"
+            break;
+            case "orange":
+            text.style.color="orange"
+            break;
+            case "violet":
+            text.style.color="violet"
+           
+       }
+ }
+
+ 
+</script>
